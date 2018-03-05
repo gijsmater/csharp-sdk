@@ -70,6 +70,20 @@ namespace PAYNLSDK.Objects
         /// <param name="description">Description of the product (max 45 characters)</param>
         /// <param name="price">Amount in cents of the product (amount incl. vat)</param>
         /// <param name="vatCode">The vat code</param>
+        /// <param name="quantity">Quantity of products with this product id</param>
+        /// <param name="productType">Type of the order line. Possible values: ARTICLE, SHIPPING, HANDLING, DISCOUNT</param>
+        public OrderData(string productId, string description, int price, TaxClass vatCode, int quantity, ProductType productType) : this(productId, description, price, vatCode, quantity)
+        {
+            ProductType = productType;
+        }
+
+        /// <summary>
+        /// Create a new OrderData specification
+        /// </summary>
+        /// <param name="productId">Your systems product ID</param>
+        /// <param name="description">Description of the product (max 45 characters)</param>
+        /// <param name="price">Amount in cents of the product (amount incl. vat)</param>
+        /// <param name="vatCode">The vat code</param>
         public OrderData(string productId, string description, int price, string vatCode) : this(productId, description, price, vatCode, 1) { }
 
         /// <summary>
