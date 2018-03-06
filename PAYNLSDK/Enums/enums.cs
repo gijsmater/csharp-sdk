@@ -237,4 +237,25 @@ namespace PAYNLSDK.Enums
         [EnumMember(Value = "DISCOUNT")]
         DISCOUNT,
     }
+
+    /// <summary>
+    /// Possible states for a terminal
+    /// </summary>
+    public enum TerminalState
+    {
+        [EnumMember(Value = "all")]
+        All,
+        [EnumMember(Value = "new")]
+        New,
+        [EnumMember(Value = "ordered")]
+        Ordered,
+        [EnumMember(Value = "stocked")]
+        Stocked,
+        [EnumMember(Value = "active")]
+        Active,
+        [EnumMember(Value = "inactive")]
+        Inactive,
+        [EnumMember(Value = "rma")]
+        RMA,
+    }
 }

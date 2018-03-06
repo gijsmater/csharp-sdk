@@ -59,6 +59,10 @@
   <ItemGroup>
     <Compile Include="API\Banktransfer\Add\Request.cs" />
     <Compile Include="API\Banktransfer\Add\Response.cs" />
+    <Compile Include="API\Instore\getAllTerminals\Request.cs" />
+    <Compile Include="API\Instore\getAllTerminals\Response.cs" />
+    <Compile Include="API\Instore\payment\Request.cs" />
+    <Compile Include="API\Instore\payment\Response.cs" />
     <Compile Include="API\PaymentProfile\GetAll\Request.cs" />
     <Compile Include="API\PaymentProfile\GetAll\Response.cs" />
     <Compile Include="API\PaymentProfile\GetAvailable\Request.cs" />
@@ -82,6 +86,10 @@
     <Compile Include="Objects\CountryOption.cs" />
     <Compile Include="Objects\EndUser.cs" />
     <Compile Include="Objects\Error.cs" />
+    <Compile Include="Objects\Instore\Payment.cs" />
+    <Compile Include="Objects\Instore\Progress.cs" />
+    <Compile Include="Objects\Instore\TerminalInformation.cs" />
+    <Compile Include="Objects\Instore\Transaction.cs" />
     <Compile Include="Objects\Merchant.cs" />
     <Compile Include="Objects\OrderData.cs" />
     <Compile Include="Objects\PaymentDetails.cs" />
@@ -93,6 +101,7 @@
     <Compile Include="Objects\ServiceCategory.cs" />
     <Compile Include="Objects\StatsDetails.cs" />
     <Compile Include="Objects\StornoDetails.cs" />
+    <Compile Include="Objects\Instore\Terminal.cs" />
     <Compile Include="Objects\TransactionData.cs" />
     <Compile Include="Objects\TransactionStartInfo.cs" />
     <Compile Include="Objects\TransactionStats.cs" />
