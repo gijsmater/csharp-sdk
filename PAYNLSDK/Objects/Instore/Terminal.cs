@@ -10,7 +10,7 @@ namespace PAYNLSDK.Objects.Instore
     /// <summary>
     /// Pin Terminal object.
     /// </summary>
-    public partial class Terminal : TerminalInformation
+    public partial class Terminal
     {
         /// <summary>
         /// ID of the terminal. Can be used to start a transaction for a specific terminal. See: API_Terminal_v1::payment(); 

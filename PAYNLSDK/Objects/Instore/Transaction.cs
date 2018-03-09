@@ -7,19 +7,8 @@ using System.Threading.Tasks;
 
 namespace PAYNLSDK.Objects.Instore
 {
-    public class Transaction
+    public class Transaction : TransactionStateInformation
     {
-        /// <summary>
-        /// The status of the transaction. Possible values:
-        /// init: payment initialized
-        /// approved: payment successful
-        /// cancelled: payment cancelled by customer
-        /// expired: transaction not completed in time
-        /// error: an error occured while processing the payment
-        /// </summary>
-        [JsonProperty("state")]
-        public string State { get; set; }
-
         /// <summary>
         /// ID for the PIN transaction.
         /// </summary>
@@ -37,6 +26,12 @@ namespace PAYNLSDK.Objects.Instore
         /// </summary>
         [JsonProperty("issuerUrl")]
         public string IssuerUrl { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("statusUrl")]
+        public string StatusUrl { get; set; }
 
     }
 }

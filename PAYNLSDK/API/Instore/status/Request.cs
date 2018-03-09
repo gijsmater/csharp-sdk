@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PAYNLSDK.API.Instore.getAllTerminals
+namespace PAYNLSDK.API.Instore.status
 {
     /// <summary>
     /// API will return a list of terminals linked to the merchant.
@@ -32,10 +32,12 @@ namespace PAYNLSDK.API.Instore.getAllTerminals
         }
 
         /// <summary>
-        /// supply a specific terminal state to filter results on. Possible values are: 'all', 'new', 'ordered', 'stocked', 'active', 'inactive', and 'rma'. Default is 'active'
+        /// The order ID or EX code of the original transaction
         /// </summary>
-        [JsonProperty("terminalState")]
-        public Enums.TerminalStateFilter TerminalState { get; set; }
+        [JsonProperty("hash")]
+        [JsonRequired]
+        public string Hash { get; set; }
+        
         
         public override int Version
         {
@@ -49,7 +51,7 @@ namespace PAYNLSDK.API.Instore.getAllTerminals
         
         public override string Method
         {
-            get { return "getAllTerminals"; }
+            get { return "status"; }
         }
 
         public override string Querystring
@@ -62,8 +64,8 @@ namespace PAYNLSDK.API.Instore.getAllTerminals
         {
             NameValueCollection nvc = base.GetParameters();
 
-            ParameterValidator.IsNotNull(TerminalState, "TerminalState");
-            nvc.Add("terminalState", TerminalState.ToString().ToLower());
+            ParameterValidator.IsNotNull(Hash, "Hash");
+            nvc.Add("hash", Hash);
 
             return nvc;
         }

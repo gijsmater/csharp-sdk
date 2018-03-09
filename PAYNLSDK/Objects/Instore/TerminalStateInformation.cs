@@ -11,12 +11,24 @@ namespace PAYNLSDK.Objects.Instore
     /// <summary>
     /// Basic terminal information.
     /// </summary>
-    public class TerminalInformation
+    public class TerminalStateInformation
     {
+        private string state;
+
         /// <summary>
         /// The state of the terminal.
         /// </summary>
         [JsonProperty("state")]
-        public string State { get; set; }
+        public Enums.TerminalState State
+        {
+            get
+            {
+                return Enums.EnumUtil.ToEnum<Enums.TerminalState>(state);
+            }
+            set
+            {
+                state = Enums.EnumUtil.ToEnumString(value);
+            }
+        }
     }
 }

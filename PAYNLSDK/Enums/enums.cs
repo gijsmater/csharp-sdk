@@ -239,9 +239,9 @@ namespace PAYNLSDK.Enums
     }
 
     /// <summary>
-    /// Possible states for a terminal
+    /// Possible states for a terminal to filter the request.
     /// </summary>
-    public enum TerminalState
+    public enum TerminalStateFilter
     {
         [EnumMember(Value = "all")]
         All,
@@ -257,5 +257,64 @@ namespace PAYNLSDK.Enums
         Inactive,
         [EnumMember(Value = "rma")]
         RMA,
+    }
+
+    /// <summary>
+    /// Possible status of the terminal in results.
+    /// </summary>
+    public enum TerminalState
+    {
+        /// <summary>
+        /// terminal is waiting for customer, terminal is not available
+        /// </summary>
+        [EnumMember(Value = "start")]
+        Start,
+        /// <summary>
+        /// transaction is completed, terminal is available
+        /// </summary>
+        [EnumMember(Value = "final")]
+        Final,
+        /// <summary>
+        /// an error occured while processing the payment
+        /// </summary>
+        [EnumMember(Value = "expired")]
+        Expired,
+        /// <summary>
+        /// an error occured while processing the payment
+        /// </summary>
+        [EnumMember(Value = "error")]
+        Error,
+    }
+
+    /// <summary>
+    /// Posible transaction state in results.
+    /// </summary>
+    public enum TransactionState
+    {
+        /// <summary>
+        /// payment initialized
+        /// </summary>
+        [EnumMember(Value = "init")]
+        Init,
+        /// <summary>
+        /// payment successful
+        /// </summary>
+        [EnumMember(Value = "approved")]
+        Approved,
+        /// <summary>
+        /// payment cancelled by customer
+        /// </summary>
+        [EnumMember(Value = "cancelled")]
+        Cancelled,
+        /// <summary>
+        /// transaction not completed in time
+        /// </summary>
+        [EnumMember(Value = "expired")]
+        Expired,
+        /// <summary>
+        /// an error occured while processing the payment 
+        /// </summary>
+        [EnumMember(Value = "error")]
+        Error,
     }
 }

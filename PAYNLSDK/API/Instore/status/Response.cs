@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PAYNLSDK.API.Instore.payment
+namespace PAYNLSDK.API.Instore.status
 {
     public class Response : ResponseBase
     {
@@ -14,7 +14,7 @@ namespace PAYNLSDK.API.Instore.payment
         /// Transaction information.
         /// </summary>
         [JsonProperty("transaction")]
-        public Objects.Instore.Transaction Transaction { get; set; }
+        public TransactionStateInformation Transaction { get; set; }
 
         /// <summary>
         /// Terminal information.
