@@ -18,11 +18,13 @@ namespace PAYNLSDK.API.Transaction.Approve
         [JsonProperty("transactionId")]
         public string TransactionId { get; set; }
 
+        /*
         /// <summary>
         /// not implemented
         /// </summary>
-      //  [JsonProperty("entranceCode")]
-     //   public string EntranceCode { get; set; }
+        [JsonProperty("entranceCode")]
+        public string EntranceCode { get; set; }
+        */
 
         /* overrides */
         /// <summary>

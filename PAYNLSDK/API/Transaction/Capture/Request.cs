@@ -37,7 +37,7 @@ namespace PAYNLSDK.API.Transaction.Capture
         public List<CaptureProduct> Products { get; set; }
 
         /// <summary>
-        /// Some payment methods require proof of shipment. Provide the Track&Trace code if available/applicable
+        /// Some payment methods require proof of shipment. Provide the Track &amp; Trace code if available/applicable
         /// </summary>
         [JsonProperty("tracktrace")]
         public string Tracktrace { get; set; }
