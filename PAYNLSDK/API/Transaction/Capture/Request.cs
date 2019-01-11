@@ -64,7 +64,7 @@ namespace PAYNLSDK.API.Transaction.Capture
         /// </summary>
         public override string Method
         {
-            get { return "decline"; }
+            get { return "capture"; }
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace PAYNLSDK.API.Transaction.Capture
             NameValueCollection nvc = base.GetParameters();
 
             ParameterValidator.IsNotEmpty(TransactionId, "TransactionId");
-            nvc.Add("orderId", TransactionId);
+            nvc.Add("transactionId", TransactionId);
 
 
             return nvc;
