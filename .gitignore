@@ -1,3 +1,17 @@
 PAYNLSDK/bin/
 PAYNLSDK/obj/
 PAYNLSDK/SmartAssemblyStrongName.snk
+
+.vs
+obj/
+
+.idea/
+PrecompiledWeb/
+
+*.ncrunchproject
+
+prepros-6.config
+*.ncrunchsolution
+*.ncrunchsolution.user
+
+node_modules/
